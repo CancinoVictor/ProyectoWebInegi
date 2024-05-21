@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Asegúrate de que la ruta al CSS sea correcta -->
+</head>
+<body class="admin-page">
+    <!-- Menú de navegación -->
+    <nav class="menu-top">
+        <ul>
+            <li><a href="/crud">CRUD de Usuarios</a></li>
+            <li><a href="/habitantesXvivienda">Habitantes por Vivienda</a></li> <!-- Agrega este enlace -->
+            <li><a href="/reportes">Reportes Estadísticos</a></li>
+            <li><a href="/tipos_de_casas">Tipos de Casas</a></li>
+            <li><a href="/viviendaXsustento">Actividades Económicas</a></li>
+            <li><a href="/dashboard">Dashboard de Poblacion</a></li>
+        </ul>
+        
+        <div class="user-info">
+            Logueado como: {{ usuario['nombre'] }}
+        </div>
+        <form action="{{ url_for('logout') }}" method="get" class="logout-form">
+            <button type="submit" class="logout-button">Cerrar el Sistema</button>
+        </form>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div class="contenido">
+        <section id="catalogo">
+            <!-- Aquí va el contenido para CRUD de Catálogos -->
+        </section>
+        <!-- Otras secciones aquí -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard de habitantes por vivienda</title>
+    <link rel="stylesheet" href="/static/css/habitantes.css"> <!-- Asegúrate de que la ruta al CSS sea correcta -->
+</head>
+<body>
+
+<div class="container">
+    <h1>Dasboard de habitantes por vivienda</h1>
+
+    <table>
+        <tr>
+            <th>ID Vivienda</th>
+            <th>Material de Construcción</th>
+            <th>Localidad</th>
+            <th>Número de Habitantes</th>
+            <th>Habitantes</th>
+        </tr>
+        {% for vivienda in viviendas %}
+        <tr>
+            <td>{{ vivienda[0] }}</td>
+            <td>{{ vivienda[1] }}</td>
+            <td>{{ vivienda[2] }}</td>
+            <td>{{ vivienda[3] }}</td>
+            <td>{{ vivienda[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Botón para regresar a la página de administración -->
+    <a href="/admin" class="btn-regresar">Regresar a Administración</a>
+</div>
+
+</body>
+</html>

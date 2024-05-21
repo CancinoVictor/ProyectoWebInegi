@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.menu-top {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu-top ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-top ul li {
+    flex: 1;
+}
+
+.menu-top ul li:last-child {
+    margin-right: 0;
+}
+
+.menu-top ul li a,
+.logout-button {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.menu-top ul li a:hover,
+.logout-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.user-info {
+    color: rgb(224, 6, 6);
+    font-size: 14px;
+    background-color: #e9ecef;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contenido {
+    flex: 1;
+    padding: 20px;
+    background: url('/static/img/INEGI.jpg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}

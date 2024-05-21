@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de vivienda por sustento</title>
+    <link rel="stylesheet" href="/static/css/viviendaXsustento.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Dashboard de vivienda por sustento</h1>
+
+    <table aria-label="Resumen de vivienda por sustento">
+        <thead>
+            <tr>
+                <th>ID Vivienda</th>
+                <th>Sustento</th>
+                <th>Habitantes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vivienda in viviendas_sustento %}
+            <tr>
+                <td>{{ vivienda[0] }}</td>
+                <td>{{ vivienda[1] }}</td>
+                <td>{{ vivienda[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/admin" class="btn-regresar">Regresar a Administración</a>
+</div>
+
+</body>
+</html>
