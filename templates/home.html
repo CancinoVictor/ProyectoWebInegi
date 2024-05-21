@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Asegúrate de que la ruta al CSS sea correcta -->
+</head>
+<body class="admin-page">
+    <!-- Menú de navegación -->
+    <nav class="menu-top">
+        <ul>
+            <!-- Cambié el href para dirigir al usuario a la ruta /registro -->
+            <li><a href="{{ url_for('registro') }}">Formulario de registro</a></li>
+        </ul>
+        <div class="user-info">
+            Logueado como: {{ usuario['nombre'] }}
+        </div>
+        <form action="{{ url_for('logout') }}" method="get" class="logout-form">
+            <button type="submit" class="logout-button">Cerrar el Sistema</button>
+        </form>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div class="contenido">
+        <section id="catalogo">
+            <!-- Aquí va el contenido para CRUD de Catálogos -->
+        </section>
+        <!-- Otras secciones aquí -->
+    </div>
+</body>
+</html>

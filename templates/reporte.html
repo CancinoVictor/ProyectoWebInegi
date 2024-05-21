@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <link rel="stylesheet" href="/static/css/reporte.css"> <!-- Asegúrate de que la ruta al CSS sea correcta -->
+  
+</head>
+<body>
+    <h1>Graficas y Estadisticas</h1>
+    <a href="/catalogo" class="btn-catalogo">Catalogo Coahuila</a>
+
+    <div class="grafico">
+        <h2>Población por Municipio</h2>
+        {{ grafico_municipio|safe }}
+    </div>
+    <div class="grafico">
+        <h2>Población por Localidad</h2>
+        {{ grafico_localidad|safe }}
+    </div>
+    <a href="/admin" class="btn-regresar">Regresar a Administración</a>
+
+</body>
+</html>

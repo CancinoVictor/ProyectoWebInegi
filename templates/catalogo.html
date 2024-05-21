@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="/static/css/catalogo.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Catálogo de Población</h1>
+    <a href="/admin" class="btn-regresar">Regresar a Administración</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>MAPA</th>
+                <th>Estatus</th>
+                <th>CVE_ENT</th>
+                <th>NOM_ENT</th>
+                <th>NOM_ABR</th>
+                <th>CVE_MUN</th>
+                <th>NOM_MUN</th>
+                <th>CVE_LOC</th>
+                <th>NOM_LOC</th>
+                <th>AMBITO</th>
+                <th>LATITUD</th>
+                <th>LONGITUD</th>
+                <th>LAT_DECIMAL</th>
+                <th>LON_DECIMAL</th>
+                <th>ALTITUD</th>
+                <th>CVE_CARTA</th>
+                <th>POB_TOTAL</th>
+                <th>POB_MASCULINA</th>
+                <th>POB_FEMENINA</th>
+                <th>TOTAL_VIVIENDAS_HABITADAS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertan los datos del catálogo obtenidos de la consulta SQL -->
+            {% for dato in datos_catalogo %}
+            <tr>
+                <td>{{ dato[0] }}</td>
+                <td>{{ dato[1] }}</td>
+                <td>{{ dato[2] }}</td>
+                <td>{{ dato[3] }}</td>
+                <td>{{ dato[4] }}</td>
+                <td>{{ dato[5] }}</td>
+                <td>{{ dato[6] }}</td>
+                <td>{{ dato[7] }}</td>
+                <td>{{ dato[8] }}</td>
+                <td>{{ dato[9] }}</td>
+                <td>{{ dato[10] }}</td>
+                <td>{{ dato[11] }}</td>
+                <td>{{ dato[12] }}</td>
+                <td>{{ dato[13] }}</td>
+                <td>{{ dato[14] }}</td>
+                <td>{{ dato[15] }}</td>
+                <td>{{ dato[16] }}</td>
+                <td>{{ dato[17] }}</td>
+                <td>{{ dato[18] }}</td>
+                <td>{{ dato[19] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+
+</body>
+</html>

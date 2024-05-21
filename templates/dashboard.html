@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Población</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Dashboard de Población</h1>
+
+    <h2>Población por Municipio</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Municipio</th>
+                <th>Población</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertan los datos de población por municipio obtenidos de la consulta SQL -->
+            {% for municipio in poblacion_municipio %}
+            <tr>
+                <td>{{ municipio[0] }}</td>
+                <td>{{ municipio[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Población por Localidad</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Localidad</th>
+                <th>Población</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertan los datos de población por localidad obtenidos de la consulta SQL -->
+            {% for localidad in poblacion_localidad %}
+            <tr>
+                <td>{{ localidad[0] }}</td>
+                <td>{{ localidad[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/admin" class="btn-regresar">Regresar a Administración</a>
+</div>
+
+</body>
+</html>

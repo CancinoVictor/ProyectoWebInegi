@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard de habitantes por material de vivienda</title>
+    <link rel="stylesheet" href="/static/css/habitantes.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Dasboard de habitantes por material de vivienda</h1>
+
+    <table aria-label="Resumen de habitantes por material de vivienda">
+        <thead>
+            <tr>
+                <th>Material de Construcción</th>
+                <th>ID Vivienda</th>
+                <th>Número de Habitantes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for habitante in habitantesXmaterial %}
+            <tr>
+                <td>{{ habitante[0] }}</td>
+                <td>{{ habitante[1] }}</td>
+                <td>{{ habitante[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/admin" class="btn-regresar">Regresar a Administración</a>
+</div>
+
+</body>
+</html>
